@@ -8,7 +8,7 @@ import ClientsList from "./ClienstList";
 import ClientsFilter from "./ClientsFilter";
 import Background from "../../components/Background";
 import { useWebSocket } from "../../hooks/useWebSocket";
-import { Client } from "@/context/useStore";
+import { Client } from "../../context/useStore";
 
 //Pagina de clientes
 
