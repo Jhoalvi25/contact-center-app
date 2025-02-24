@@ -1,19 +1,21 @@
+// useWebSocket.ts
 import { useEffect } from "react";
 
-//UsewebSockets para actualización en tiempo real
-
-export const useWebSocket = (onMessageReceived: (data: any) => void) => {
+// Hook genérico de WebSocket
+export const useWebSocket = <T>(onMessageReceived: (data: T) => void, url: string) => {
   useEffect(() => {
-    const socket = new WebSocket("wss://tu-servidor-websocket.com");
+    const socket = new WebSocket(url);
 
     socket.onmessage = (event) => {
-      const data = JSON.parse(event.data);
+      const data: T = JSON.parse(event.data);
       onMessageReceived(data);
     };
 
     return () => {
       socket.close();
     };
-  }, [onMessageReceived]);
+  }, [onMessageReceived, url]);
 };
+
+
 

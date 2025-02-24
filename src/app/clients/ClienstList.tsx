@@ -1,8 +1,9 @@
 import { FaUser, FaClock } from "react-icons/fa";
+import { Client } from "@/context/useStore";
 
 //Listado de clientes y su información
 
-const ClientsList = ({ clients }: { clients: any[] }) => (
+const ClientsList = ({ clients }: { clients: Client[] }) => (
   <ul className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
     {clients.map((client) => (
       <li

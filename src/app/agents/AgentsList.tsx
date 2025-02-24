@@ -1,4 +1,5 @@
 import { FaUserTie, FaUserClock } from "react-icons/fa";
+import { Agent } from "@/context/useStore";
 
 const statusColors: Record<string, string> = {
   disponible: "bg-green-500 text-white",
@@ -6,7 +7,7 @@ const statusColors: Record<string, string> = {
   pausa: "bg-yellow-500 text-white",
 };
 //Listado de agentes y su información
-const AgentsList = ({ agents }: { agents: any[] }) => (
+const AgentsList = ({ agents }: { agents: Agent[] }) => (
   <ul className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
     {agents.map((agent) => (
       <li
