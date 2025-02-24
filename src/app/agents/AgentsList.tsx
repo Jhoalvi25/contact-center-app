@@ -1,5 +1,5 @@
 import { FaUserTie, FaUserClock } from "react-icons/fa";
-import { Agent } from "@/context/useStore";
+import { Agent } from "../../context/useStore";
 
 const statusColors: Record<string, string> = {
   disponible: "bg-green-500 text-white",

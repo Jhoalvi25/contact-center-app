@@ -7,8 +7,8 @@ import LoadingAgents from "./loading";
 import AgentsList from "./AgentsList";
 import AgentsFilter from "./AgentsFilter";
 import Background from "../../components/Background";
-import { useWebSocket } from "@/hooks/useWebSocket";
-import { Agent } from "@/context/useStore";
+import { useWebSocket } from "../../hooks/useWebSocket";
+import { Agent } from "../../context/useStore";
 
 //Pagina de Agentes
 

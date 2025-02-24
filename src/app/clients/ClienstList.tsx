@@ -1,5 +1,5 @@
 import { FaUser, FaClock } from "react-icons/fa";
-import { Client } from "@/context/useStore";
+import { Client } from "../../context/useStore";
 
 //Listado de clientes y su información
 
