@@ -34,7 +34,7 @@ contact-center-app/
 │── src/
 │   ├── app/                     # Rutas de la aplicación
 │   │   ├── agents/              # Página de agentes y sus componentes
-│   │   ├── clients/             # Página de clientes yt sus componentes
+│   │   ├── clients/             # Página de clientes y sus componentes
 │   │   ├── layout.tsx           # Layout principal
 │   │   ├── page.tsx             # Página de inicio
 │   ├── components/              # Componentes reutilizables
