@@ -115,3 +115,7 @@ Abrir en el navegador
 ```bash
 http://localhost:3000
 ```
+
+## ▶ **Deploy de la App**
+
+https://contact-center-app.vercel.app
