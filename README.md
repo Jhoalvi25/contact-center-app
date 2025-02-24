@@ -25,5 +25,84 @@ Aplicación desarrollada en **Next.js + TypeScript** para la gestión de agentes
 
 ## 🛠 **Estructura del Proyecto**  
 
-📂 contact-center-frontend 
-├── 📂 components # Componentes reutilizables │ ├── Header.tsx # Barra de navegación │ ├── Footer.tsx # Pie de página │ ├── AgentCard.tsx # Tarjeta de agente │ ├── ClientCard.tsx # Tarjeta de cliente ├── 📂 context # Estado global con useContext ├── 📂 hooks # Hooks personalizados (WebSockets) ├── 📂 pages # Rutas principales │ ├── index.tsx # Página principal │ ├── agents.tsx # Página de agentes │ ├── clients.tsx # Página de clientes ├── 📂 services # Llamadas a la API RESTful ├── 📂 styles # Estilos globales ├── 📄 layout.tsx # Layout global ├── 📄 next.config.js # Configuración de Next.js ├── 📄 package.json # Dependencias └── 📄 README.md # Documentación
+```bash
+contact-center-app/
+│── public/                     # Archivos estáticos
+│── src/
+│   ├── app/                     # Rutas de la aplicación
+│   │   ├── agents/              # Página de agentes
+│   │   ├── clients/             # Página de clientes
+│   │   ├── layout.tsx           # Layout principal
+│   │   ├── page.tsx             # Página de inicio
+│   ├── components/              # Componentes reutilizables
+│   │   ├── Footer.tsx           # Pie de página
+│   ├── context/                 # Manejo de estado global
+│   ├── hooks/                   # Custom hooks
+│   ├── services/                # Llamadas a la API
+│   ├── utils/                   # Funciones auxiliares
+│── next.config.mjs              # Configuración de Next.js
+│── tsconfig.json                # Configuración de TypeScript
+│── package.json                 # Dependencias y scripts
+│── tailwind.config.ts           # Configuración de Tailwind CSS
+│── .eslintrc.json               # Configuración de ESLint
+
+```
+
+---
+
+## 🔄 **Manejo de Estado y Actualización en Tiempo Real**  
+Se usa **Context API** para el estado global de los agentes y clientes, asegurando que la información se actualice de forma eficiente en toda la app.  
+
+**Flujo de Datos:**  
+1️⃣ Se hace una llamada a la API RESTful para obtener los datos iniciales.  
+2️⃣ Se usa **WebSockets** para recibir cambios en tiempo real.  
+3️⃣ Si el backend falla, se muestran **datos de prueba (MockData)**.  
+
+---
+
+## 🔍 **MPA vs SPA**  
+
+| **Característica**      | **SPA (Single Page App)**            | **MPA (Multi Page App)**          |
+|------------------------|--------------------------------|--------------------------------|
+| Renderizado          | Cliente                          | Servidor                        |
+| Velocidad inicial    | Lenta (Carga única)             | Rápida                          |
+| Navegación          | Sin recarga                      | Recarga completa de página     |
+| SEO                 | Más difícil                      | Mejor optimizado                |
+
+Este proyecto usa **Next.js** para obtener lo mejor de ambos mundos:  
+✔ **SSR (Server Side Rendering)** para mejorar SEO.  
+✔ **CSR (Client Side Rendering)** para una experiencia fluida.  
+
+---
+
+## 🎨 **Diseño y Estilos**  
+- **Tailwind CSS** para un diseño limpio y responsive.  
+- **Animaciones en hover y transiciones suaves**.  
+- **Colores adaptados para mejor usabilidad**.  
+
+---
+
+## ▶ **Cómo Ejecutar el Proyecto**  
+
+1️⃣ Clonar el repositorio  
+```bash
+git clone https://github.com/tu-repo/contact-center-frontend.git
+cd contact-center-frontend
+```
+Instalar dependencias
+```bash
+npm install
+```
+Ejecutar el proyecto
+
+```bash
+npm run dev
+```
+Abrir en el navegador
+
+```bash
+http://localhost:3000
+```
+
+
+
