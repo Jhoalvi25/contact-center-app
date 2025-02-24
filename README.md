@@ -86,7 +86,7 @@ Este proyecto usa **Next.js** para obtener lo mejor de ambos mundos:
 
 1️⃣ Clonar el repositorio  
 ```bash
-git clone https://github.com/tu-repo/contact-center-frontend.git
+git clone https://github.com/Jhoalvi25/contact-center-app.git
 cd contact-center-frontend
 ```
 Instalar dependencias
