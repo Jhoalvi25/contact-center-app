@@ -7,7 +7,12 @@ import Footer from '../components/Footer';
 export const metadata: Metadata = {
   title: 'Contact Center',
   description: 'Administración de agentes y clientes en espera',
+  icons: {
+    icon: "./favicon.ico",
+  },
 };
+
+//Barra de navegación
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (

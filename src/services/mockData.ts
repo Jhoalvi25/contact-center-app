@@ -1,3 +1,5 @@
+//Datos de prueba
+
 export const mockAgents = [
   { id: "1", name: "Juan Pérez", status: "disponible", waitTime: 2 },
   { id: "2", name: "Ana Gómez", status: "en llamada", waitTime: 5 },

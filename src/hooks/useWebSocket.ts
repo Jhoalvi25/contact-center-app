@@ -1,26 +1,19 @@
-import { useEffect } from 'react';
-import { io } from 'socket.io-client';
-import { useStore } from '../context/useStore';
+import { useEffect } from "react";
 
-const SOCKET_URL = 'wss://api-contact-center.com'; // Cambia por la URL real
+//UsewebSockets para actualización en tiempo real
 
-export const useWebSocket = () => {
-  const setAgents = useStore((state) => state.setAgents);
-  const setClients = useStore((state) => state.setClients);
-
+export const useWebSocket = (onMessageReceived: (data: any) => void) => {
   useEffect(() => {
-    const socket = io(SOCKET_URL);
+    const socket = new WebSocket("wss://tu-servidor-websocket.com");
 
-    socket.on('updateAgents', (data) => {
-      setAgents(data);
-    });
-
-    socket.on('updateClients', (data) => {
-      setClients(data);
-    });
+    socket.onmessage = (event) => {
+      const data = JSON.parse(event.data);
+      onMessageReceived(data);
+    };
 
     return () => {
-      socket.disconnect();
+      socket.close();
     };
-  }, [setAgents, setClients]);
+  }, [onMessageReceived]);
 };
+

@@ -1,5 +1,7 @@
 import { create } from 'zustand';
 
+//Interfaces
+
 interface Agent {
   id: string;
   name: string;

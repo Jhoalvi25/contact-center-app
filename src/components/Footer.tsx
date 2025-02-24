@@ -1,3 +1,5 @@
+//Pie de pagina
+
 const Footer = () => {
     return (
       <footer className="w-full bg-black/80 text-white py-4 text-center text-sm">
