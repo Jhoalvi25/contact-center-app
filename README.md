@@ -85,7 +85,7 @@ Este proyecto usa **Next.js** para obtener lo mejor de ambos mundos:
 - **Tailwind CSS** para un diseño limpio y responsive.
 - **Animaciones en hover y transiciones suaves**.
 - **Colores adaptados para mejor usabilidad**.
-- **Loadings para experiencia de usuario y Streaming**.
+- **Loadings para mejor experiencia de usuario**.
 
 ---
 
