@@ -1,36 +1,29 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🏢 Contact Center - Frontend  
 
-## Getting Started
+Aplicación desarrollada en **Next.js + TypeScript** para la gestión de agentes y clientes en espera dentro de un **Contact Center**. Permite ver en tiempo real el estado de los agentes y los clientes en espera, con filtros y actualizaciones dinámicas mediante WebSockets.  
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 **Tecnologías Utilizadas**  
+- **Next.js** (App Router)  
+- **TypeScript**  
+- **Tailwind CSS**  
+- **React Icons**  
+- **WebSockets**  
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📌 **Características**  
+✅ **Lista de agentes** con nombre, estado y tiempo de espera.  
+✅ **Lista de clientes** con nombre y tiempo de espera.  
+✅ **Filtros dinámicos** usando QueryParams.  
+✅ **WebSockets** para actualizaciones en tiempo real.  
+✅ **MockData** si el backend no responde.  
+✅ **Diseño minimalista y responsive**.  
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🛠 **Estructura del Proyecto**  
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+📂 contact-center-frontend 
+├── 📂 components # Componentes reutilizables │ ├── Header.tsx # Barra de navegación │ ├── Footer.tsx # Pie de página │ ├── AgentCard.tsx # Tarjeta de agente │ ├── ClientCard.tsx # Tarjeta de cliente ├── 📂 context # Estado global con useContext ├── 📂 hooks # Hooks personalizados (WebSockets) ├── 📂 pages # Rutas principales │ ├── index.tsx # Página principal │ ├── agents.tsx # Página de agentes │ ├── clients.tsx # Página de clientes ├── 📂 services # Llamadas a la API RESTful ├── 📂 styles # Estilos globales ├── 📄 layout.tsx # Layout global ├── 📄 next.config.js # Configuración de Next.js ├── 📄 package.json # Dependencias └── 📄 README.md # Documentación
